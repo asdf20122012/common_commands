@@ -1,0 +1,11 @@
+1.du -h --max-depth=1 /    #查看目录空间暂用
+
+2.CentOS去除"You have new mail in /var/spool/mail/root"的方法
+
+方法一：
+echo "unset MAILCHECK" >> /etc/profile
+vim  /usr/share/logwatch/default.conf/logwatch.conf
+#将下面内容：
+MailTo = root
+#修改为：
+MailTo = ****@126.com     #指定要接收的邮箱
